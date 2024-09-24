@@ -50,6 +50,23 @@ const Projects: CollectionConfig = {
         position: 'sidebar',
       },
     },
+    {
+      name: 'categories',
+      type: 'relationship',
+      relationTo: 'categories',
+      hasMany: true,
+      admin: {
+        position: 'sidebar',
+      },
+    },
+    {
+      name: 'projectImage', // required
+      type: 'upload', // required
+      relationTo: 'media', // required
+      admin: {
+        position: 'sidebar',
+      },
+    },
   ],
 }
 

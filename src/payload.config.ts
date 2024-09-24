@@ -8,6 +8,8 @@ import { buildConfig } from 'payload/config'
 
 import Users from './collections/Users'
 import Projects from './collections/Projects'
+import Media from './collections/Media'
+import Categories from './collections/Categories'
 
 export default buildConfig({
   admin: {
@@ -15,7 +17,7 @@ export default buildConfig({
     bundler: webpackBundler(),
   },
   editor: slateEditor({}),
-  collections: [Users, Projects],
+  collections: [Users, Projects, Media, Categories],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
   },
